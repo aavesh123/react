@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withRecommendedLabel } from "./RestaurantCard";
 import ShimmerCard from "./ShimmerCard"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -25,6 +25,8 @@ export const Body = () => {
             }
         })
     }
+
+    const WithRecommendedLabel = withRecommendedLabel(RestaurantCard);
 
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false) return <h1>Looks like you're offline!! Please check</h1>
@@ -59,7 +61,15 @@ export const Body = () => {
             </div>
             <div className="wrapper restaurant-wrapper">
                 {
-                    filteredRestaurant.map((restaurant => <Link key={restaurant.info.id} to={'restaurant/' + restaurant.info.id}><RestaurantCard restaurantData={restaurant} /></Link>
+                    filteredRestaurant.map((restaurant =>
+                        <Link
+                            key={restaurant.info.id}
+                            to={'restaurant/' + restaurant.info.id}>
+                            {
+                                restaurant.info.avgRating > 4 ? <WithRecommendedLabel restaurantData={restaurant} /> : <RestaurantCard restaurantData={restaurant} />
+                            }
+
+                        </Link>
                     ))
                 }
             </div>

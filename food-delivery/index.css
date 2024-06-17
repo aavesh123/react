@@ -1,4 +1,8 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
     --primary-color: #FC8A06;
     --primary-dark-color: #03081F;
     --secondary-light-color: #fff;
@@ -217,3 +221,17 @@ section.category-item-wrapper .category-item {
     border: 1px solid;
     margin-bottom: 10px;
 }
+
+.recommended-rest-wrapper {
+    position: relative;
+}
+
+.recommended-label {
+    position: absolute;
+    background-color: var(--primary-dark-color);
+    color: var(--secondary-light-color);
+    z-index: 1;
+    margin-top: 14px;
+    padding: 5px 20px;
+    position: absolute;
+} */
