@@ -1,8 +1,8 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-/* :root {
+:root {
     --primary-color: #FC8A06;
     --primary-dark-color: #03081F;
     --secondary-light-color: #fff;
@@ -234,4 +234,31 @@ section.category-item-wrapper .category-item {
     margin-top: 14px;
     padding: 5px 20px;
     position: absolute;
-} */
+}
+
+.text-center {
+    width: 768px;
+    margin: 0 auto;
+}
+
+.rest-category {
+    margin: 10px;
+}
+
+.rest-category-wrapper {
+    border: 2px solid;
+    margin: 10px;
+}
+
+.rest-category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: lightslategrey;
+    cursor: pointer;
+}
+
+.rest-category-item-details {
+    border-bottom: 1px solid;
+    padding: 10px;
+}

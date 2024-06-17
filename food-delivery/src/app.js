@@ -25,9 +25,6 @@ const Footer = () => {
 const Layout = () => {
     return (
         <div className="wrapper layout-wrapper">
-            <h1 class="text-3xl font-bold underline text-c">
-                Hello world!
-            </h1>
             <Header />
             {/* <Banner /> */}
             <Outlet />
