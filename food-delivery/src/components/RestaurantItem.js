@@ -1,6 +1,5 @@
 
 const RestaurantItem = ({ item }) => {
-    console.log(item);
     return (
         <div className="rest-category-item-details">
             <div>{item.name}</div>
